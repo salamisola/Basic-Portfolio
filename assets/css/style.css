@@ -1,0 +1,33 @@
+#bio-image{
+    width: 100px; 
+}
+body {
+    background: white;
+    widows: 4;
+  }
+  img {
+    width: 500px;
+  }
+  
+  #container {
+    background: pink;
+    width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .dog {
+    background: yellow;
+    width: 400px;
+  }
+  #header {
+    width: 100%;
+    background: blanchedalmond;
+    height: 20px;
+  }
+  #yourName {
+    float: left;
+    margin: 0 20px;
+    background: grey;
+  }
+  #links {
+    float: right;
+  }
