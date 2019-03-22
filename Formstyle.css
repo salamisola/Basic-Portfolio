@@ -1,32 +1,161 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-* {
-  box-sizing: border-box;
+
+body {
+	background:#c3c1c1;
+	font: Arial, Helvetica, sans-serif;
+	font-size:20px;
+	line-height:1.5em;
+	color:#000000;
+	
 }
 
+#pageWidth {
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: #e8e5e4;
+	
+}
+.container_16 {
+	font-size:.75em;
+	position:relative;
+	
+}
+header {
+	height:80px;
+	overflow:hidden;
+	/*border-bottom:2px solid #2a2a2a;*/
+}
+#content {
+	padding:0 0 90px 0;
+	background:#e8e5e4;
+	
+}
+#mainContent article {
+	padding:30px 0 32px 0;
+	margin-bottom:30px;
+	/*border-bottom:1px dashed #323232;*/
+}
+#mainContent article.last {
+	padding-bottom:0;
+	margin-bottom:0;
+	border:none;
+}
+
+p {
+	margin-bottom:18px;
+	text-align:justify;
+	padding-left:20px; 
+	padding-right:20px;
+	color:#000000;
+}
+
+a {
+	color:#c0c0c0;
+	outline:none;
+}
+a:hover {
+	text-decoration:none;
+}
+h2 {
+	font-size:33px;
+	color:#22b413;
+	line-height:1.2em;
+	font-weight:normal;
+	letter-spacing:-1px;
+	margin-bottom:.5em;
+	text-align:left; 
+	padding:0px 0 0 20px;
+}
+h3 {
+	font-size:1em;
+	line-height:16px;
+	font-weight:normal;
+	text-transform:uppercase;
+	color:#c0c0c0;
+	margin-bottom:5px;
+	text-align:justify;
+}
+h4 {
+	font-size:1em;
+	color:#616161;
+	margin-bottom:12px;
+	text-align:justify;
+}
+h5 {
+	font-size:15px;
+	line-height:20px;
+	font-weight:normal;
+	color:#909090;
+	font-style:italic;
+	margin-bottom:1em;
+}
+
+
+header .logo {
+	position:absolute;
+	left:110px;
+	width:250px;
+	padding:0 30px 0 30px;
+	background-color:#22b413;
+	
+}
+
+header .logo h1 {
+	font-size:38px;
+	line-height:1.2em;
+	color:#c3c3c3;
+	font-weight:bolder;
+	font-style:normal;
+	letter-spacing:-1px;
+}
+header .logo h1 a {
+	color:#c3c3c3;	
+	text-decoration:none;
+}
+header .logo h1 a strong {
+	color:#fff;
+}
+header nav {
+	position:absolute;
+	top:30px;
+	right:100px;
+}
+header nav ul li {
+	float:left;
+	padding-left:6px;
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+}
+header nav ul li a {
+	float:left;
+	display: block;
+	color:#656865;
+	text-decoration:none;
+	width:90px;
+	text-align:center;
+	font-size:16px;
+	font-weight:bolder;
+}
+/*added hover for effect*/
+header nav ul li a:hover {background-color: #000000;
+  color:#b45c13	
+  }
+
+#mainContent article {
+	padding:30px 0 32px 0;
+	margin-bottom:30px;
+}
+{box-sizing: border-box;}
+
 input[type=text], select, textarea {
-  /* width: 100%; */
-   width: 80%;
+  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
   resize: vertical;
-}
-
-input[type=text], select, textarea {
-    /* width: 100%; */
-     width: 80%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
 }
 
 input[type=submit] {
@@ -36,85 +165,59 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #a04585;
 }
 
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  margin-left: 150px;
+  margin-right:150px;
+  margin-bottom:100px;
+  margin-top:30px;
 }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+footer {
+	border-top:2px solid #22b413;
+	padding:40px 0;
+	color:#777;
+	font-size:.75em;
+	float: center;
+	background-color: #5a5959;
+}
+footer .footerlink {
+	position:relative;
+	margin:0 auto;
+	width:976px;
+}
+.footerlink p {
+	margin:0;
+	padding:0;
+	line-height:normal;
+	white-space:nowrap;
+	text-indent:inherit;
+	color:#777;
+}
+.footerlink a {
+	color:#ffffff;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	border:none;
+	float:center;
+	text-decoration:underline;
+	background-color:transparent;
+}
+.footerlink a:hover {
+	color:#777;
+	background-color:transparent;
+	text-decoration:blue;
 }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+.footerlink .rf {
+	text-align:center;
 }
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Responsive Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
-
-<div class="container">
-  <form action="/action_page.php">
-  <div class="row">
-    <div class="col-25">
-      <label for="fname">First Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    </div>
-  </div>
-  
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="Message">Message</label>
-    </div>
-    <div class="col-75">
-      <textarea id="Message" name="Message" placeholder="Write something.." style="height:200px"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <input type="submit" value="Submit">
-  </div>
-  </form>
-</div>
-
-</body>
-</html>
